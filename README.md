@@ -111,7 +111,7 @@ studybot/
 
 ## License
 
-[MIT License](LICENSE)
+[MIT License](https://opensource.org/license/mit)
 
 ## Contributing
 
