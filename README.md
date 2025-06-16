@@ -26,7 +26,7 @@ StudyBot is an AI-powered educational assistant that provides personalized learn
 1. Clone the repository:
 
 ```powershell
-git clone <repository-url>
+git clone https://github.com/trinverdale-bit/studybot.git
 cd studybot
 ```
 
