@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>StudyBot</title>
+        <link rel="stylesheet" href="/static/styles.css" />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        />
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <script>
+            marked.setOptions({
+                breaks: true,
+                gfm: true,
+                headerIds: false,
+                mangle: false,
+            });
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="logo">StudyBot</div>
+            <div id="sidebar" class="history-sidebar">
+                <h3>
+                    <button
+                        id="newChatBtn"
+                        class="new-chat-btn"
+                        title="New Chat"
+                    >
+                        +
+                    </button>
+                </h3>
+                <div id="sessionList"></div>
+            </div>
+
+            <header>
+                <div class="settings">
+                    <select id="yearLevel" aria-label="Year Level">
+                        <option value="7">Year 7</option>
+                        <option value="8">Year 8</option>
+                        <option value="9">Year 9</option>
+                        <option value="10">Year 10</option>
+                        <option value="11">Year 11</option>
+                        <option value="12">Year 12</option>
+                    </select>
+                    <select id="explanationType" aria-label="Explanation Type">
+                        <option value="step-by-step">Step by Step</option>
+                        <option value="visual">Visual</option>
+                        <option value="simple">Simple Summary</option>
+                        <option value="real-world">Real-World Example</option>
+                    </select>
+                    <label class="toggle">
+                        <input type="checkbox" id="lowDataMode" />
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </header>
+            <main class="chat-container">
+                <div id="chatMessages" class="chat-messages"></div>
+                <div class="input-area">
+                    <textarea
+                        id="userInput"
+                        placeholder="Ask StudyBot a question..."
+                        rows="3"
+                    ></textarea>
+                    <button id="sendButton">Send</button>
+                </div>
+            </main>
+        </div>
+        <script src="/static/script.js"></script>
+    </body>
+</html>
